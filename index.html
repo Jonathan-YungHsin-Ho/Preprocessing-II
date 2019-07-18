@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fun Bus Travel Agency - Solution</title>
 
     <link
@@ -20,14 +20,14 @@
   <body>
     <nav>
       <div class="container">
-      <div><h1>Fun Bus</h1></div>
-      <div class="nav-bar">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
+        <div><h1>Fun Bus</h1></div>
+        <div class="nav-bar">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
       </div>
-    </div>
     </nav>
 
     <header class="container">
@@ -119,6 +119,27 @@
             expedition clean excursion traveling.
           </p>
           <div class="btn">Sign Me Up!</div>
+        </div>
+      </section>
+
+      <section class="signup container">
+        <div>
+          <h2>Select a Vacation Package Here!</h2>
+          <form action="" method="post">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user-name" />
+            </div>
+            <div>
+              <label for="mail">Email:</label>
+              <input type="email" id="mail" name="user-mail" />
+            </div>
+            <div>
+              <label for="msg">Special Instructions:</label>
+              <textarea name="user-msg" id="msg" cols="30" rows="10"></textarea>
+            </div>
+            <div class="buttons"><button type="submit">Submit!</button></div>
+          </form>
         </div>
       </section>
     </div>

@@ -1,4 +1,8 @@
 .container {
+  @media @tablet {
+    width: @tablet-width;
+  }
+
   @media @mobile {
     width: @mobile-width;
   }
@@ -93,7 +97,7 @@ header {
     display: flex;
     justify-content: space-between;
 
-    @media @mobile {
+    @media @tablet {
       flex-direction: column;
       align-items: center;
     }
@@ -103,7 +107,7 @@ header {
       margin-bottom: 30px;
       .flex-options(column; space-between; flex-start);
 
-      @media @mobile {
+      @media @tablet {
         width: 80%;
       }
     }
@@ -115,6 +119,57 @@ header {
 
     &:hover {
       background-color: darken(@eastern-blue, 20%);
+    }
+  }
+
+  .signup {
+    padding: 30px 0;
+    border-top: 2px dashed @navigation-border;
+
+    form {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 20px;
+
+      padding: 3%;
+      border: 1px solid @navigation-border;
+      border-radius: 15px;
+
+      div + div {
+        margin-top: 3%;
+      }
+
+      label {
+        display: inline-block;
+        width: 40%;
+        text-align: right;
+        font-family: "Roboto";
+        font-size: 1.6rem;
+        color: @font-color;
+        padding-right: 1%;
+      }
+
+      input, textarea {
+        font: 1.6rem "Roboto";
+        width: 50%;
+        padding: 1%;
+      }
+
+      textarea {
+        vertical-align: top;
+        height: 20rem;
+      }
+
+      button {
+        .buttons("Roboto" ; 1.8rem; 50%; 15px; 1.5rem 0; @eastern-blue; white);
+        cursor: pointer;
+        border: none;
+        margin-left: 40%;
+
+        &:hover {
+          background-color: darken(@eastern-blue, 20%);
+        }
+      }
     }
   }
 } // home
