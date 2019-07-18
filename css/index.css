@@ -222,6 +222,24 @@ img {
   justify-content: space-between;
 }
 .home .content-pick .destination {
-  width: 30%;
+  width: 26%;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.home .btn {
+  font-family: 'Roboto';
+  font-size: 1.8rem;
+  width: 100%;
+  border-radius: 15px;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: #17A2B8;
+  color: white;
+  cursor: pointer;
+}
+.home .btn:hover {
+  background-color: #007171;
 }

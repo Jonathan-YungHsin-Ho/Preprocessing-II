@@ -54,8 +54,18 @@
     justify-content: space-between;
 
     .destination {
-      width: 30%;
+      width: 26%;
       margin-bottom: 30px;
+      .flex-options(column; space-between; flex-start);
+    }
+  }
+
+  .btn {
+    .buttons('Roboto'; 1.8rem; 100%; 15px; 1.5rem 0; @eastern-blue; white);
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(@eastern-blue), 1%);
     }
   }
 }// home
