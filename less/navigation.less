@@ -5,13 +5,26 @@ nav {
   padding: 20px 0;
   border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      padding-bottom: 7px;
+    }
+
   .container {
     max-width: 800px;
     .flex-options(row; space-between; center);
 
+    @media @mobile {
+      flex-direction: column;
+    }
+
     .nav-bar {
       width: 42%;
       .flex-options(row; space-around; center);
+
+      @media @mobile {
+        width: 100%;
+        padding-top: 9px;
+      }
 
       a {
           font-size: 1.6rem;
