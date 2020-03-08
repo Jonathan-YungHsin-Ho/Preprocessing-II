@@ -1,24 +1,60 @@
-.home {
+.container {
+  @media @tablet {
+    width: @tablet-width;
+  }
 
+  @media @mobile {
+    width: @mobile-width;
+  }
+}
+
+header {
+  margin: 30px 0;
+  border-bottom: 2px dashed @navigation-border;
+  padding-bottom: 15px;
+
+  .header-txt {
+    padding-top: 15px;
+  }
+}
+
+.home {
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -26,6 +62,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      .flex-options(@direct: column-reverse; space-between; center);
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +82,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +97,79 @@
     display: flex;
     justify-content: space-between;
 
+    @media @tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .destination {
-      width: 30%;
+      width: 26%;
       margin-bottom: 30px;
+      .flex-options(column; space-between; flex-start);
+
+      @media @tablet {
+        width: 80%;
+      }
     }
   }
-}// home
+
+  .btn {
+    .buttons("Roboto" ; 1.8rem; 100%; 15px; 1.5rem 0; @eastern-blue; white);
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(@eastern-blue, 20%);
+    }
+  }
+
+  .signup {
+    padding: 30px 0;
+    border-top: 2px dashed @navigation-border;
+
+    form {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 20px;
+
+      padding: 3%;
+      border: 1px solid @navigation-border;
+      border-radius: 15px;
+
+      div + div {
+        margin-top: 3%;
+      }
+
+      label {
+        display: inline-block;
+        width: 40%;
+        text-align: right;
+        font-family: "Roboto";
+        font-size: 1.6rem;
+        color: @font-color;
+        padding-right: 1%;
+      }
+
+      input, textarea {
+        font: 1.6rem "Roboto";
+        width: 50%;
+        padding: 1%;
+      }
+
+      textarea {
+        vertical-align: top;
+        height: 20rem;
+      }
+
+      button {
+        .buttons("Roboto" ; 1.8rem; 50%; 15px; 1.5rem 0; @eastern-blue; white);
+        cursor: pointer;
+        border: none;
+        margin-left: 40%;
+
+        &:hover {
+          background-color: darken(@eastern-blue, 20%);
+        }
+      }
+    }
+  }
+} // home
